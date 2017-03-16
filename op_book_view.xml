@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_op_book_inherit">
+      <field name="name">op.book.inherit</field>
+      <field name="model">op.book</field>
+      <field name="inherit_id" ref="openeducat_erp.view_op_book_form"/>
+      <field name="priority" eval="20"/>
+      <field name='type'>form</field>
+      <field name='arch' type='xml'>
+        <field name="number_book" position="after">
+          <label for="codigo_barras" string="Codigo de Barras"/>
+          <field name="codigo_barras" style="width: 20%%" />
+        </field>
+
+        <field name="publisher_ids" position="after">
+           <separator string="Lugar de Publicacion "/><p></p>
+           <field name="publicacion" nolabel="1" /> 
+        </field>           
+          
+        <xpath expr="//page[@string='Book Queue Requests']" position='after'>
+          <page string='Comentarios' >
+            <field name='book_comments'  >
+              <tree>
+                <field name="description"  />
+                <field name="active"  />
+              </tree>
+            </field>
+          </page>
+        </xpath>
+      </field>
+    </record>
+    
+  </data>
+</openerp>

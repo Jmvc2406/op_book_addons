@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_op_book_comments_form">
+      <field name="name">op.book.comments</field>
+      <field name="model">op.book.comments</field>
+      <field name='type'>form</field>
+      <field name='arch' type='xml'>
+        <form string="Comentarios" version="7.0">
+          <sheet>
+		<field name="description"/>
+		<field name="active"/>
+          </sheet>
+        </form>
+      </field>
+      
+    </record>
+  </data>
+</openerp>
